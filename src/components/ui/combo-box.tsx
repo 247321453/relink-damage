@@ -66,8 +66,9 @@ export function ComboBox({
               {options.map((option) => {
                 return (
                   <CommandItem
-                    key={option.value}
+                    key={option.label}
                     value={option.value}
+                    keywords={[option.label, option.value]}
                     onSelect={(currentValue) => {
                       setValue(currentValue === value ? "" : currentValue);
                       setOpen(false);
@@ -79,7 +80,7 @@ export function ComboBox({
                         value === option.value ? "opacity-100" : "opacity-0"
                       )}
                     />
-                    {option.label}
+                    {(option.label === option.value) ? option.value : (option.label + '(' + option.value + ')')}
                   </CommandItem>
                 );
               })}

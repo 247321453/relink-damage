@@ -59,7 +59,7 @@ export const CharacterPicker = () => {
           <CharacterSpecificInput
             characterSpecificVariable={uniqueSigilActive}
             setCharacterSpecificVariable={setUniqueSigilActive}
-            title="Unique Sigil Active"
+            title="觉醒因子激活"
             description=""
             isCharacterSpecificVariableBoolean
           />

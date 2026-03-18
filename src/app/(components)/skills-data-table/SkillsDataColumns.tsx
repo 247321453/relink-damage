@@ -195,7 +195,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "averageTotalDmg",
-        header: "评价总伤害",
+        header: "平均总伤害",
         cell: ({ row }) => (
           <div>{numberWithCommas(row.original.averageTotalDmg)}</div>
         ),

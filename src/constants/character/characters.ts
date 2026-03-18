@@ -142,7 +142,7 @@ export const characterConstants = [
   },
   {
     characterName: "Sandalphon",
-    imageLink: "/images/ymvvOeh.png",
+    imageLink: "/images/Sandalphon.png",
     warpathEnhancement: 0,
   },
 ];

@@ -9,7 +9,7 @@ interface UserConfigStore {
 export const useUserConfigStore = create(
   persist<UserConfigStore>(
     (set) => ({
-      showAuroraBackground: true,
+      showAuroraBackground: false,
       setShowAuroraBackground: (_showAuroraBackground: boolean) =>
         set(() => ({ showAuroraBackground: _showAuroraBackground })),
     }),

@@ -48,7 +48,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       {
         accessorKey: "skill",
         header: () => (
-          <div className="w-full px-2 flex flex-col justify-center">Skill</div>
+          <div className="w-full px-2 flex flex-col justify-center">技能</div>
         ),
         cell: ({ row }) => (
           <div className="w-full px-2 flex flex-col justify-center">
@@ -63,7 +63,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "skillRatio",
-        header: "Skill Ratio",
+        header: "伤害倍率",
         cell: ({ row }) => (
           <>
             {safeDecimalMultiplier([row.original.skillRatio, 100]).toFixed(2)}%
@@ -72,7 +72,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "dmgCap",
-        header: "Damage Cap",
+        header: "伤害上限",
         cell: ({ row }) => (
           <div className="">
             <div className="">{numberWithCommas(row.original.dmgCap)}</div>
@@ -81,7 +81,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "classification",
-        header: "Classification",
+        header: "类型",
         cell: ({ row }) => (
           <div className="flex gap-1">
             {/* No = Normal
@@ -137,7 +137,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "multi",
-        header: "Multiplier",
+        header: "倍率",
         cell: ({ row }) => (
           <div>
             {safeDecimalMultiplier([row.original.multi, 100]).toFixed(2)}%
@@ -146,7 +146,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "critChance",
-        header: "Crit Chance",
+        header: "暴击率",
         cell: ({ row }) => (
           <div>
             {safeDecimalMultiplier([row.original.critChance, 100]).toFixed(2)}%
@@ -155,47 +155,47 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "totalDamageCap",
-        header: "Total Damage Cap",
+        header: "总伤害上限",
         cell: ({ row }) => (
           <div>{numberWithCommas(Math.round(row.original.totalDamageCap))}</div>
         ),
       },
       {
         accessorKey: "nonCrit",
-        header: "Non Crit",
+        header: "伤害",
         cell: ({ row }) => (
           <div>{numberWithCommas(Math.round(row.original.nonCrit))}</div>
         ),
       },
       {
         accessorKey: "crit",
-        header: "Crit",
+        header: "暴击伤害",
         cell: ({ row }) => (
           <div>{numberWithCommas(Math.round(row.original.crit))}</div>
         ),
       },
       {
         accessorKey: "damagePotential",
-        header: "Damage Potential",
+        header: "上限比例",
         cell: ({ row }) => (
           <DamagePotentialCell damagePotential={row.original.damagePotential} />
         ),
       },
       {
         accessorKey: "overcap",
-        header: "Overcap",
+        header: "溢出",
         cell: ({ row }) => <div>{row.original.overcap.toFixed(2)}%</div>,
       },
       {
         accessorKey: "supplemental",
-        header: "Supplemental",
+        header: "追击",
         cell: ({ row }) => (
           <div>{numberWithCommas(row.original.supplemental)}</div>
         ),
       },
       {
         accessorKey: "averageTotalDmg",
-        header: "Average Total Damage",
+        header: "评价总伤害",
         cell: ({ row }) => (
           <div>{numberWithCommas(row.original.averageTotalDmg)}</div>
         ),

@@ -27,7 +27,8 @@ export const traitLiterals = [
   "Berserker",
   "War Elemental",
   "Stout Heart",
-  "Awakening",
+  "Awakening 1",
+  "Awakening 2",
   "Low Profile",
   "Steady Focus",
   "Autorevive",
@@ -193,7 +194,7 @@ export const sigilConstants: {
     sigilMaxLevel: 0,
   },
   {
-    sigilName: "DMG Cap" satisfies TraitLiterals,
+    sigilName: "DMG Cap",
     sigilImage: "/images/3lmC4aG.png",
     sigilColor: "Orange",
     sigilSeconds: "GrayRedPurpleBlueNone",
@@ -606,7 +607,14 @@ export const sigilConstants: {
     sigilMaxLevel: 30,
   },
   {
-    sigilName: "Awakening",
+    sigilName: "Awakening 1",
+    sigilImage: "/images/jnMUx4D.png",
+    sigilColor: "Unique",
+    sigilSeconds: "OrangeGrayCritRedPurpleBlueNone",
+    sigilMaxLevel: 15,
+  },
+  {
+    sigilName: "Awakening 2",
     sigilImage: "/images/jnMUx4D.png",
     sigilColor: "Unique",
     sigilSeconds: "OrangeGrayCritRedPurpleBlueNone",
@@ -636,7 +644,7 @@ export const sigilConstants: {
 ];
 
 export function getSigilImage(_sigil: TraitLiterals) {
-  if (_sigil === "Awakening") return "/images/jnMUx4D.png";
+  //if (_sigil === "Awakening 1" || _sigil == "Awakening 2") return "/images/jnMUx4D.png";
   return sigilConstants.find((sigil) => sigil.sigilName === _sigil) ===
     undefined
     ? "/images/ymvvOeh.png"

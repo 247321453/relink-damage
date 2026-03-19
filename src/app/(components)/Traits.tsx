@@ -221,13 +221,14 @@ const TraitsTable = ({
                       )}
                 </TableCell>
                 <TableCell
-                  className={`text-right px-4 ${
-                    trait.actualUseableLevel === trait.maxLevel &&
-                    "bg-green-200"
-                  }`}
+                  className={`text-right px-4 
+                    ${trait.actualUseableLevel === trait.maxLevel && "bg-green-200"}
+                  `}
                 >
                   <div className=" flex gap-1 justify-center">
-                    <div className="font-bold">{trait.actualUseableLevel}</div>
+                    <div className={`font-bold 
+                      ${trait.calculatedLevel > trait.maxLevel && "text-red-500"}
+                    `}>{trait.calculatedLevel}</div>
                     <div>/</div>
                     <div>{trait.maxLevel}</div>
                   </div>

@@ -20,7 +20,7 @@ export function convertLogsToCalculatorTrait(
     case "05f2ecdc":
       return "Cascade";
     case "05fa4599":
-      return "Awakening";
+      return "Awakening 2";//SKILL_124_01
     case "082033cb":
       return "None";
     case "09aa7db5":
@@ -28,7 +28,7 @@ export function convertLogsToCalculatorTrait(
     case "0aa20846":
       return "None";
     case "0cd6c625":
-      return "Awakening";
+      return "Awakening 1";//SKILL_126_00
     case "0ead65e0":
       return "None";
     case "0fba47e8":
@@ -38,11 +38,11 @@ export function convertLogsToCalculatorTrait(
     case "1470f860":
       return "Steel Nerves";
     case "151e4674":
-      return "Awakening";
+      return "Awakening 1";//SKILL_116_00
     case "1568e0e4":
       return "Head Start";
     case "16eff868":
-      return "Awakening";
+      return "Awakening 2";//SKILL_122_01
     case "1b0d9897":
       return "None";
     case "1c360c63":
@@ -52,15 +52,15 @@ export function convertLogsToCalculatorTrait(
     case "2242921f":
       return "None";
     case "23d0f67f":
-      return "Awakening";
+      return "Awakening 1";//SKILL_119_00
     case "24883af3":
       return "Potion Hoarder";
     case "29b07beb":
-      return "Awakening";
+      return "Awakening 1";//SKILL_127_00
     case "29b292a8":
       return "None";
     case "2e65a774":
-      return "Awakening";
+      return "Awakening 1";//SKILL_122_00
     case "2fc8fbff":
       return "Stamina";
     case "318d12e9":
@@ -70,7 +70,7 @@ export function convertLogsToCalculatorTrait(
     case "3759a5b9":
       return "None";
     case "3bfed918":
-      return "Awakening";
+      return "Awakening 1";//SKILL_115_00
     case "3c2b57b0":
       return "None";
     case "3f2c482e":
@@ -82,7 +82,7 @@ export function convertLogsToCalculatorTrait(
     case "40223c28":
       return "None";
     case "451d814c":
-      return "Awakening";
+      return "Awakening 2";//SKILL_128_01
     case "4bf2e191":
       return "None";
     case "4c588c27":
@@ -94,9 +94,9 @@ export function convertLogsToCalculatorTrait(
     case "50b453dd":
       return "None";
     case "522e2388":
-      return "Awakening";
+      return "Awakening 2";//SKILL_125_01
     case "5463232f":
-      return "Awakening";
+      return "Awakening 1";//SKILL_128_00
     case "57ab5b10":
       return "Supplementary DMG";
     case "57e8a93f":
@@ -114,21 +114,21 @@ export function convertLogsToCalculatorTrait(
     case "6b694d6d":
       return "Weak Point DMG";
     case "6ebfa176":
-      return "Awakening";
+      return "Awakening 1"; //SKILL_131_00
     case "6ff05223":
-      return "Awakening";
+      return "Awakening 2";//SKILL_123_01
     case "70395731":
       return "Berserker";
     case "71f11a9b":
       return "Tyranny";
     case "7351d602":
-      return "Awakening";
+      return "Awakening 2";//SKILL_120_01
     case "7440e869":
-      return "Awakening";
+      return "Awakening 1";//SKILL_132_00
     case "74aa75d6":
       return "None";
     case "7ad0c010":
-      return "Awakening";
+      return "Awakening 2";//SKILL_130_01
     case "7c2e4d64":
       return "Dodge Payback";
     case "7c84a6b3":
@@ -142,11 +142,11 @@ export function convertLogsToCalculatorTrait(
     case "84078cb0":
       return "Quick Charge";
     case "86cbcdc4":
-      return "Awakening";
+      return "Awakening 1";//SKILL_124_00
     case "8b3bf60c":
       return "Improved Dodge";
     case "8cdf9382":
-      return "Awakening";
+      return "Awakening 1";//SKILL_121_00
     case "8d078597":
       return "Throw DMG";
     case "8d2adb6e":
@@ -156,11 +156,11 @@ export function convertLogsToCalculatorTrait(
     case "8f502f0d":
       return "Life on the Line";
     case "921b6b0c":
-      return "Awakening";
+      return "Awakening 2";//SKILL_118_01
     case "9389cc06":
       return "None";
     case "93a2093c":
-      return "Awakening";
+      return "Awakening 1";//SKILL_130_00
     case "95f3fa86":
       return "Autorevive";
     case "9702860f":
@@ -168,7 +168,7 @@ export function convertLogsToCalculatorTrait(
     case "973b49af":
       return "None";
     case "9a9dc170":
-      return "Awakening";
+      return "Awakening 1";//SKILL_125_00
     case "9ad8b5e6":
       return "None";
     case "a1a8e39d":
@@ -176,15 +176,15 @@ export function convertLogsToCalculatorTrait(
     case "a2fa9685":
       return "None";
     case "a374fdf0":
-      return "Awakening";
+      return "Awakening 2";//SKILL_116_01
     case "a38510e2":
-      return "Awakening";
+      return "Awakening 2";//SKILL_114_01
     case "a3b49220":
-      return "Awakening";
+      return "Awakening 2";//SKILL_126_01
     case "a4d6b880":
       return "None";
     case "a63b89cd":
-      return "Awakening";
+      return "Awakening 2";//SKILL_127_01
     case "a7a45f28":
       return "Combo Finisher DMG";
     case "a8a3163b":
@@ -192,17 +192,17 @@ export function convertLogsToCalculatorTrait(
     case "a9d17f55":
       return "None";
     case "aa83f548":
-      return "Awakening";
+      return "Awakening 1";//SKILL_118_00
     case "ac9674c1":
       return "None";
     case "af513a9d":
-      return "Awakening";
+      return "Awakening 2";//SKILL_129_01
     case "af794a87":
       return "None";
     case "b360801d":
       return "Concentrated Fire";
     case "b48eef48":
-      return "Awakening";
+      return "Awakening 1";//SKILL_117_00
     case "b5ff9fd3":
       return "Uplift";
     case "b6e31f76":
@@ -210,15 +210,15 @@ export function convertLogsToCalculatorTrait(
     case "c0979a17":
       return "Critical Hit DMG";
     case "c2a4c7a9":
-      return "Awakening";
+      return "Awakening 2";//SKILL_119_01
     case "c35b111b":
       return "Lucky Charge";
     case "c86f3082":
       return "None";
     case "cd030268":
-      return "Awakening";
+      return "Awakening 1";//SKILL_114_00
     case "cd124165":
-      return "Awakening";
+      return "Awakening 2";//SKILL_132_01
     case "cd18a77d":
       return "None";
     case "cdeb73f6":
@@ -228,13 +228,13 @@ export function convertLogsToCalculatorTrait(
     case "cfb48782":
       return "None";
     case "d1012d8c":
-      return "Awakening";
+      return "Awakening 2";//SKILL_121_01
     case "d2c8e10a":
       return "Nimble Onslaught";
     case "d54f8ca7":
       return "None";
     case "d908223d":
-      return "Awakening";
+      return "Awakening 1";//SKILL_120_00
     case "dbe1d775":
       return "Alpha";
     case "dc225c96":
@@ -248,7 +248,7 @@ export function convertLogsToCalculatorTrait(
     case "e0abfdfe":
       return "Aegis";
     case "e60a735c":
-      return "Awakening";
+      return "Awakening 1";//SKILL_123_00
     case "e69a4694":
       return "Guts";
     case "e6cdba9c":
@@ -258,17 +258,17 @@ export function convertLogsToCalculatorTrait(
     case "ec1c6779":
       return "Flight over Fight";
     case "ec3cf174":
-      return "Awakening";
+      return "Awakening 1";//SKILL_129_00
     case "f17850b9":
       return "Combo Booster";
     case "f1d5dbd0":
-      return "Awakening";
+      return "Awakening 2";//SKILL_131_01
     case "f372f096":
       return "None";
     case "f687c5ef":
       return "None";
     case "f8496336":
-      return "Awakening";
+      return "Awakening 2";//SKILL_115_01
     case "fb572681":
       return "None";
     case "0e42be1b":
@@ -285,7 +285,7 @@ export function convertLogsToCalculatorTrait(
     case "6316cbeb":
       return "Warpath";
     case "77c809f5":
-      return "Awakening";
+      return "Awakening 1";//SKILL_170_00
     case "7b4fc47a":
       return "Warpath";
     case "81b293d9":
@@ -293,9 +293,9 @@ export function convertLogsToCalculatorTrait(
     case "8519ad4a":
       return "Warpath";
     case "8572b8af":
-      return "Awakening";
+      return "Awakening 2";//SKILL_171_01
     case "9230e3f5":
-      return "Awakening";
+      return "Awakening 2";//SKILL_170_01
     case "9afdfa9e":
       return "Warpath";
     case "a339d642":
@@ -324,7 +324,7 @@ export function convertLogsToCalculatorTrait(
     case "e6b92e34":
       return "Warpath";
     case "e85ff8e0":
-      return "Awakening";
+      return "Awakening 1";//SKILL_171_00
     case "ef05ec4d":
       return "Boundary/Ain+";
     case "f71f8997":
@@ -335,11 +335,11 @@ export function convertLogsToCalculatorTrait(
     case "ee85cd1f":
       return "Berserker Echo";
     case "d40d1e9b":
-      return "Awakening";
+      return "Awakening 1";//SKILL_172_00
     case "15806dfc":
-      return "Awakening";
+      return "Awakening 2";//SKILL_172_01
     case "1a2ef59e":
-      return "Awakening";
+      return "Boundary/Ain+";//SKILL_172_03
     case "3d8153a1":
       return "Spartan Echo";
     case "4e5f6706":

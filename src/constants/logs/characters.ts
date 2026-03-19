@@ -24,8 +24,8 @@ export const logsCharacters = {
   Pl1900: "Id",
   Pl2000: "",
   Pl2100: "Sandalphon",
-  Pl2200: "",
-  Pl2300: "",
+  Pl2200: "Seofon",
+  Pl2300: "Tweyen",
   Pl2400: "",
 };
 
@@ -54,14 +54,11 @@ export function convertLogsToCalculatorCharacter(
     case "Pl1700":
     case "Pl1800":
     case "Pl1900":
+    case "Pl2100":
+    case "Pl2200":
+    case "Pl2300":
       return logsCharacters[_characterType] as Character;
     case "Pl2000":
-    case "Pl2100":
-    // for sandalphon
-    case "Pl2200":
-      return "Seofon" as Character;
-    case "Pl2300":
-      return "Tweyen" as Character;
     case "Pl2400":
       return "Io" as Character;
     default:

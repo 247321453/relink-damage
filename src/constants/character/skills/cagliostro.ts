@@ -133,6 +133,30 @@ const skillsJson: SkillJsonRaw[] = [
       "Classification": "No"
     },
     {
+      "Skill": "Power Strike 2",
+      "Modifier": "",
+      "Skill Ratio": 1.2,
+      "DMG Cap": 9999,
+      "CD": 0,
+      "Classification": "No"
+    },
+    {
+      "Skill": "Power Strike 3",
+      "Modifier": "",
+      "Skill Ratio": 0.25,
+      "DMG Cap": 1999,
+      "CD": 0,
+      "Classification": "No"
+    },
+    {
+      "Skill": "Power Strike 4",
+      "Modifier": "",
+      "Skill Ratio": 3.2,
+      "DMG Cap": 14999,
+      "CD": 0,
+      "Classification": "No"
+    },
+    {
       "Skill": "Combo Finisher 1",
       "Modifier": "Spear 1",
       "Skill Ratio": 1.5,
@@ -181,14 +205,6 @@ const skillsJson: SkillJsonRaw[] = [
       "Classification": "NoFi"
     },
     {
-      "Skill": "Power Strike 2",
-      "Modifier": "",
-      "Skill Ratio": 1.2,
-      "DMG Cap": 9999,
-      "CD": 0,
-      "Classification": "No"
-    },
-    {
       "Skill": "Combo Finisher 2",
       "Modifier": "",
       "Skill Ratio": 2,
@@ -197,28 +213,12 @@ const skillsJson: SkillJsonRaw[] = [
       "Classification": "NoFi"
     },
     {
-      "Skill": "Power Strike 3",
-      "Modifier": "",
-      "Skill Ratio": 0.25,
-      "DMG Cap": 1999,
-      "CD": 0,
-      "Classification": "No"
-    },
-    {
       "Skill": "Combo Finisher 3",
       "Modifier": "",
       "Skill Ratio": 0.12,
       "DMG Cap": 1999,
       "CD": 0,
       "Classification": "NoFi"
-    },
-    {
-      "Skill": "Power Strike 4",
-      "Modifier": "",
-      "Skill Ratio": 3.2,
-      "DMG Cap": 14999,
-      "CD": 0,
-      "Classification": "No"
     },
     {
       "Skill": "Combo Finisher 4",

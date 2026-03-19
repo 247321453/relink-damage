@@ -243,7 +243,7 @@ const skillsJson: SkillJsonRaw[] = [
     Classification: "Sb",
   },
   {
-    Skill: "Arm Destructon",
+    Skill: "Arm Destruction",
     Modifier: "",
     "Skill Ratio": 6,
     "DMG Cap": 49999,

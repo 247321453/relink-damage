@@ -176,7 +176,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "damagePotential",
-        header: "上限比例",
+        header: "伤害比例",
         cell: ({ row }) => (
           <DamagePotentialCell damagePotential={row.original.damagePotential} />
         ),

@@ -33,6 +33,9 @@ export const traitLiterals = [
   "Autorevive",
   "Guts",
   "Potion Hoarder",
+  "Berserker Echo",
+  "Spartan Echo",
+  //
   "Quick Cooldown",
   "Cascade",
   "Uplift",
@@ -59,8 +62,6 @@ export const traitLiterals = [
   "Crabby Resonance",
   "Warpath",
   "Boundary/Ain+",
-  "Berserker Echo",
-  "Spartan Echo",
   "Super Ultimate Perfect Dodge",
 ] as const;
 
@@ -174,6 +175,8 @@ export const sigilOptions = traitLiterals.map((sigil) => {
     value: sigil,
   };
 });
+
+export const sigilSplitPosition = 30;
 
 export const sigilConstants: {
   sigilName: TraitLiterals;
@@ -383,6 +386,20 @@ export const sigilConstants: {
     sigilImage: "/images/F1sxTGy.png",
     sigilColor: "Orang_Exclusive",
     sigilSeconds: "None",
+    sigilMaxLevel: 15,
+  },
+  {
+    sigilName: "Berserker Echo",
+    sigilImage: "/images/3lmC4aG.png",
+    sigilColor: "Orange",
+    sigilSeconds: "GrayRedPurpleBlueNone",
+    sigilMaxLevel: 15,
+  },
+  {
+    sigilName: "Spartan Echo",
+    sigilImage: "/images/3lmC4aG.png",
+    sigilColor: "Orange",
+    sigilSeconds: "GrayRedPurpleBlueNone",
     sigilMaxLevel: 15,
   },
   {
@@ -607,20 +624,6 @@ export const sigilConstants: {
     sigilImage: "/images/jnMUx4D.png",
     sigilColor: "Unique_New",
     sigilSeconds: "None",
-    sigilMaxLevel: 15,
-  },
-  {
-    sigilName: "Berserker Echo",
-    sigilImage: "/images/3lmC4aG.png",
-    sigilColor: "Orange",
-    sigilSeconds: "GrayRedPurpleBlueNone",
-    sigilMaxLevel: 15,
-  },
-  {
-    sigilName: "Spartan Echo",
-    sigilImage: "/images/3lmC4aG.png",
-    sigilColor: "Orange",
-    sigilSeconds: "GrayRedPurpleBlueNone",
     sigilMaxLevel: 15,
   },
   {

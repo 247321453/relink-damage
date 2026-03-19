@@ -17,6 +17,7 @@ export const Weapon = () => {
   const params = useParams();
   const lng = params.lng as string;
   const traitsTranslate = useTranslation(lng, "traits");
+  const uiTranslate = useTranslation(lng, "ui");
   const t = useTranslationEz("ui/weapon");
   const isTerminus = useBuildStore((state) => state.isTerminus);
   const isMaxAwakening = useBuildStore((state) => state.isMaxAwakening);
@@ -32,7 +33,7 @@ export const Weapon = () => {
       value: sigil.sigilName,
       label:
         convertCalculatorToLogsTrait(sigil.sigilName) === undefined
-          ? sigil.sigilName
+          ? uiTranslate.t(sigil.sigilName)
           : traitsTranslate.t(
               `${convertCalculatorToLogsTrait(sigil.sigilName)}.text`
             ),
@@ -89,7 +90,7 @@ export const Weapon = () => {
                     <ComboBox
                       commandEmptyText="None"
                       options={allOptions}
-                      placeHolder="Input Sigils"
+                      placeHolder={uiTranslate.t("Input Sigils")}
                       value={weaponImbues[index].traitName}
                       setValue={(value) => {
                         updateWeaponImbues(index, {
@@ -97,6 +98,11 @@ export const Weapon = () => {
                           traitName: value as TraitLiterals,
                         });
                       }}
+                      showImage={true}
+                      getImage={(value) => {
+                          return getSigilImage(value as TraitLiterals) as string
+                        }
+                      }
                     />
                   </div>
 

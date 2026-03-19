@@ -43,6 +43,7 @@ interface SigilsPickerProps {
 const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
   const params = useParams();
   const lng = params.lng as string;
+  const uiTranslate = useTranslation(lng, "ui");
   const traitsTranslate = useTranslation(lng, "traits");
   const updateSigilSet = useBuildStore((state) => state.updateSigilSet);
 
@@ -51,12 +52,13 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
       value: sigil.sigilName,
       label:
         convertCalculatorToLogsTrait(sigil.sigilName) === undefined
-          ? sigil.sigilName
+          ? uiTranslate.t(sigil.sigilName)
           : traitsTranslate.t(
               `${convertCalculatorToLogsTrait(sigil.sigilName)}.text`
             ),
     };
   });
+
   return (
     <div className="flex gap-2">
       <div className="flex-1 grid 2xl:grid-cols-2 gap-2">
@@ -72,7 +74,7 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
           <ComboBox
             commandEmptyText="None"
             options={options}
-            placeHolder="Input Sigils"
+            placeHolder={uiTranslate.t("Input Sigils")}
             value={sigilSet.sigil1}
             setValue={(value) => {
               updateSigilSet(index, {
@@ -80,6 +82,11 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
                 sigil1: value as TraitLiterals,
               });
             }}
+            showImage={true}
+            getImage={(value) => {
+                return getSigilImage(value as TraitLiterals) as string
+              }
+            }
           />
         </div>
         <div className=" flex">
@@ -94,7 +101,7 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
           <ComboBox
             commandEmptyText="None"
             options={options}
-            placeHolder="Input Sigils"
+            placeHolder={uiTranslate.t("Input Sigils")}
             value={sigilSet.sigil2}
             setValue={(value) => {
               updateSigilSet(index, {
@@ -102,6 +109,11 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
                 sigil2: value as TraitLiterals,
               });
             }}
+            showImage={true}
+            getImage={(value) => {
+                return getSigilImage(value as TraitLiterals) as string
+              }
+            }
           />
         </div>
       </div>

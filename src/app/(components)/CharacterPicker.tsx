@@ -43,13 +43,14 @@ export const CharacterPicker = () => {
   const setRageLevel = useBuildStore((state) => state.setRageLevel);
 
   function characterSpecificRenderSwitch() {
+
     switch (selectedCharacter) {
       case "Zeta":
         return (
           <CharacterSpecificInput
             characterSpecificVariable={arvessFermare}
             setCharacterSpecificVariable={setArvessFermare}
-            title="Arvess Fermare"
+            title={uiTranslate.t("Arvess Fermare")}
             description=""
             isCharacterSpecificVariableBoolean
           />
@@ -59,7 +60,7 @@ export const CharacterPicker = () => {
           <CharacterSpecificInput
             characterSpecificVariable={uniqueSigilActive}
             setCharacterSpecificVariable={setUniqueSigilActive}
-            title="觉醒因子激活"
+            title={uiTranslate.t("Unique Sigil Active")}
             description=""
             isCharacterSpecificVariableBoolean
           />
@@ -69,7 +70,7 @@ export const CharacterPicker = () => {
           <CharacterSpecificInput
             characterSpecificVariable={avatarActive}
             setCharacterSpecificVariable={setAvatarActive}
-            title="Avatar Active"
+            title={uiTranslate.t("Avatar Active")}
             description=""
             isCharacterSpecificVariableBoolean
           />
@@ -141,6 +142,11 @@ export const CharacterPicker = () => {
             setValue={(value) => {
               setSelectedCharacter(value as Character);
             }}
+            showImage={true}
+            getImage={(value) => {
+                return getCharacterImage(value as Character) as string
+              }
+            }
           />
           <div className="relative aspect-square">
             <Image

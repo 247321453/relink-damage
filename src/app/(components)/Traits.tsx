@@ -20,7 +20,7 @@ import {
   sigilLevelLiteral,
   sigilLevelValues,
 } from "@/constants/gear/sigilLevels";
-import { getSigilImage, sigilConstants } from "@/constants/gear/sigils";
+import { getSigilImage, sigilConstants, sigilSplitPosition } from "@/constants/gear/sigils";
 import { useBuildStore } from "@/stores/useBuildStore";
 import { useStatsStore } from "@/stores/useStatsStore";
 import { CalculatedTrait, Trait, TraitLiterals } from "@/types/traits.types";
@@ -132,7 +132,7 @@ export const Traits = () => {
           <h6 className="font-bold">{t("Damage Sigils")}</h6>
           <TraitsTable
             // slice operation because traitsTable is based on var sigilConstants. Starts at 1 because index 0 is "None"
-            traitsTable={traitsTable.slice(1, 29)}
+            traitsTable={traitsTable.slice(1, sigilSplitPosition+1)}
             showZeroLvlTraits={showZeroLvlTraits}
           />
         </div>
@@ -140,7 +140,7 @@ export const Traits = () => {
           <h6 className="font-bold">{t("Utility/Other Sigils")}</h6>
           <TraitsTable
             // Starts at 29 to split attack from other utility sigils"
-            traitsTable={traitsTable.slice(29, sigilConstants.length)}
+            traitsTable={traitsTable.slice(sigilSplitPosition+1, sigilConstants.length)}
             showZeroLvlTraits={showZeroLvlTraits}
           />
         </div>
@@ -182,6 +182,7 @@ const TraitsTable = ({
 }) => {
   const params = useParams();
   const lng = params.lng as string;
+  const uiTranslate = useTranslation(lng, "ui");
   const traitsTranslate = useTranslation(lng, "traits");
   const t = useTranslationEz("ui/traits");
   return (
@@ -214,7 +215,7 @@ const TraitsTable = ({
                 </TableCell>
                 <TableCell>
                   {convertCalculatorToLogsTrait(trait.traitName) === undefined
-                    ? trait.traitName
+                    ? uiTranslate.t(trait.traitName)
                     : traitsTranslate.t(
                         `${convertCalculatorToLogsTrait(trait.traitName)}.text`
                       )}

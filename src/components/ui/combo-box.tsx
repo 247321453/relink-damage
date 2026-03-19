@@ -80,7 +80,7 @@ export function ComboBox({
                         value === option.value ? "opacity-100" : "opacity-0"
                       )}
                     />
-                    {(option.label === option.value) ? option.value : (option.label + '(' + option.value + ')')}
+                    {option.label}
                   </CommandItem>
                 );
               })}

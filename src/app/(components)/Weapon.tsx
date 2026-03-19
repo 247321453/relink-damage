@@ -57,6 +57,14 @@ export const Weapon = () => {
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-2">
+          <div className=" flex items-center space-x-4 rounded-md border p-4">
+            <div className="flex-1 space-y-1">
+              <p className="text-sm font-medium leading-none">
+                {t("Weapon Imbues")}
+              </p>
+            </div>
+          </div>
+          <div className=" flex flex-col space-y-4 rounded-md border p-4">
           {weaponImbues.map((weaponImbue, index) => {
             return (
               <div className="flex gap-2" key={index}>
@@ -109,7 +117,7 @@ export const Weapon = () => {
               </div>
             );
           })}
-
+          </div>
           <div className=" flex items-center space-x-4 rounded-md border p-4">
             <div className="flex-1 space-y-1">
               <p className="text-sm font-medium leading-none">{t("Terminus")}</p>

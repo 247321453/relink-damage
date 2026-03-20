@@ -33,7 +33,7 @@ import { tweyenSkills } from "@/constants/character/skills/tweyen";
 import { seofonSkills } from "@/constants/character/skills/seofon";
 import { characterConstants } from "@/constants/character/characters";
 import { sandalphonSkills } from "@/constants/character/skills/sandalphon";
-import { useTranslationEz } from "@/app/(i18n)/client";
+import { useTranslationEz,ITranslationProps } from "@/app/(i18n)/client";
 
 export const SkillsTable = () => {
   const selectedCharacter = useBuildStore((state) => state.selectedCharacter);
@@ -49,6 +49,7 @@ export const SkillsTable = () => {
   const enhancedDmgBuff = useBuildStore((state) => state.enhancedDmgBuff);
   const [charData, setCharData] = useState<SkillCalculatedTable[]>([]);
   const echoDmg = useStatsStore((state) => state.echoDmg);
+  const uiT = useTranslationEz("ui");
   const t = useTranslationEz("ui/skills");
   const setSelectedSkills = useSelectedRowsStore(
     (state) => state.setSelectedSkills
@@ -459,6 +460,7 @@ export const SkillsTable = () => {
     enhancedDmgBuff,
     echoDmg,
   ]);
+  const _skillsDataColumns = skillsDataColumns({t: (str)=>uiT(str)});
   return (
     <div className="flex flex-col gap-4">
       <div>
@@ -466,7 +468,7 @@ export const SkillsTable = () => {
       </div>
       <SkillsDataTable
         data={charData}
-        columns={skillsDataColumns}
+        columns={_skillsDataColumns}
         setRowSelectionsForExport={setSelectedSkills}
       />
       {selectedCharacter === "Sandalphon" && (

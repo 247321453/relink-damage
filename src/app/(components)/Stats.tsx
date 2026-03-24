@@ -719,7 +719,7 @@ const AwakeningBox = () => {
   const setIsAwakening = useStatsStore((state) => state.setIsAwakening);
   useEffect(() => {
     const sigilLvl = traitsTable.find(
-      (sigil) => sigil.traitName === "Awakening"
+      (sigil) => sigil.traitName === "Awakening 1" || sigil.traitName === "Awakening 2"
     )?.actualUseableLevel;
     setIsAwakening(sigilLvl ? true : false);
   }, [setIsAwakening, traitsTable]);

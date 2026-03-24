@@ -66,8 +66,8 @@ export const recommendedBuilds: RecommendedBuildPage[] = [
             level: 15,
           },
           {
-            sigil1: "Awakening",
-            sigil2: "None",
+            sigil1: "Awakening 1",
+            sigil2: "Awakening 2",
             level: 15,
           },
           {

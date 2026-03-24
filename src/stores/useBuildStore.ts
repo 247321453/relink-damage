@@ -213,12 +213,12 @@ export const useBuildStore = create(
           level: 15,
         },
         {
-          sigil1: "Awakening",
+          sigil1: "Awakening 1",
           sigil2: "Quick Charge",
           level: 15,
         },
         {
-          sigil1: "Awakening",
+          sigil1: "Awakening 2",
           sigil2: "Quick Charge",
           level: 15,
         },

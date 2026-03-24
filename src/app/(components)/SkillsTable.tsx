@@ -33,7 +33,7 @@ import { tweyenSkills } from "@/constants/character/skills/tweyen";
 import { seofonSkills } from "@/constants/character/skills/seofon";
 import { characterConstants } from "@/constants/character/characters";
 import { sandalphonSkills } from "@/constants/character/skills/sandalphon";
-import { useTranslationEz,ITranslationProps } from "@/app/(i18n)/client";
+import { useTranslationEz } from "@/app/(i18n)/client";
 
 export const SkillsTable = () => {
   const selectedCharacter = useBuildStore((state) => state.selectedCharacter);

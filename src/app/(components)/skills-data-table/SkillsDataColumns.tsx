@@ -10,8 +10,10 @@ import {
 import { numberWithCommas, safeDecimalMultiplier } from "@/lib/calculators";
 import { SkillCalculatedTable } from "@/types/skill.types";
 import { ColumnDef } from "@tanstack/react-table";
+import { ITranslationProps } from "../../(i18n)/client";
 
-export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
+export function skillsDataColumns({t}:ITranslationProps):ColumnDef<SkillCalculatedTable>[] {
+  return [
   {
     id: "calculations",
     header: () => <div className="px-2">Calculations (2.9.4)</div>,
@@ -48,7 +50,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       {
         accessorKey: "skill",
         header: () => (
-          <div className="w-full px-2 flex flex-col justify-center">Skill</div>
+          <div className="w-full px-2 flex flex-col justify-center">{t("Skill")}</div>
         ),
         cell: ({ row }) => (
           <div className="w-full px-2 flex flex-col justify-center">
@@ -58,12 +60,12 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "modifier",
-        header: "Modifier",
+        header: () => <div>{t("Modifier")}</div>,
         cell: ({ row }) => <>{row.original.modifier}</>,
       },
       {
         accessorKey: "skillRatio",
-        header: "Skill Ratio",
+        header: () => <div>{t("Skill Ratio")}</div>,
         cell: ({ row }) => (
           <>
             {safeDecimalMultiplier([row.original.skillRatio, 100]).toFixed(2)}%
@@ -72,7 +74,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "dmgCap",
-        header: "Damage Cap",
+        header: () => <div>{t("Damage Cap")}</div>,
         cell: ({ row }) => (
           <div className="">
             <div className="">{numberWithCommas(row.original.dmgCap)}</div>
@@ -81,7 +83,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "classification",
-        header: "Classification",
+        header: () => <div>{t("Classification")}</div>,
         cell: ({ row }) => (
           <div className="flex gap-1">
             {/* No = Normal
@@ -137,7 +139,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "multi",
-        header: "Multiplier",
+        header: () => <div>{t("Multiplier")}</div>,
         cell: ({ row }) => (
           <div>
             {safeDecimalMultiplier([row.original.multi, 100]).toFixed(2)}%
@@ -146,7 +148,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "critChance",
-        header: "Crit Chance",
+        header: () => <div>{t("Crit Chance")}</div>,
         cell: ({ row }) => (
           <div>
             {safeDecimalMultiplier([row.original.critChance, 100]).toFixed(2)}%
@@ -155,47 +157,47 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
       },
       {
         accessorKey: "totalDamageCap",
-        header: "Total Damage Cap",
+        header: () => <div>{t("Total Damage Cap")}</div>,
         cell: ({ row }) => (
           <div>{numberWithCommas(Math.round(row.original.totalDamageCap))}</div>
         ),
       },
       {
         accessorKey: "nonCrit",
-        header: "Non Crit",
+        header: () => <div>{t("Non Crit")}</div>,
         cell: ({ row }) => (
           <div>{numberWithCommas(Math.round(row.original.nonCrit))}</div>
         ),
       },
       {
         accessorKey: "crit",
-        header: "Crit",
+        header: () => <div>{t("Crit")}</div>,
         cell: ({ row }) => (
           <div>{numberWithCommas(Math.round(row.original.crit))}</div>
         ),
       },
       {
         accessorKey: "damagePotential",
-        header: "Damage Potential",
+        header: () => <div>{t("Damage Potential")}</div>,
         cell: ({ row }) => (
           <DamagePotentialCell damagePotential={row.original.damagePotential} />
         ),
       },
       {
         accessorKey: "overcap",
-        header: "Overcap",
+        header: () => <div>{t("Overcap")}</div>,
         cell: ({ row }) => <div>{row.original.overcap.toFixed(2)}%</div>,
       },
       {
         accessorKey: "supplemental",
-        header: "Supplemental",
+        header: () => <div>{t("Supplemental")}</div>,
         cell: ({ row }) => (
           <div>{numberWithCommas(row.original.supplemental)}</div>
         ),
       },
       {
         accessorKey: "averageTotalDmg",
-        header: "Average Total Damage",
+        header: () => <div>{t("Average Total Damage")}</div>,
         cell: ({ row }) => (
           <div>{numberWithCommas(row.original.averageTotalDmg)}</div>
         ),
@@ -215,6 +217,7 @@ export const skillsDataColumns: ColumnDef<SkillCalculatedTable>[] = [
   //   ],
   // },
 ];
+}
 
 const SkillClassificationBadge = ({
   abrv,

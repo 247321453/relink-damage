@@ -49,6 +49,7 @@ export const SkillsTable = () => {
   const enhancedDmgBuff = useBuildStore((state) => state.enhancedDmgBuff);
   const [charData, setCharData] = useState<SkillCalculatedTable[]>([]);
   const echoDmg = useStatsStore((state) => state.echoDmg);
+  const uiT = useTranslationEz("ui");
   const t = useTranslationEz("ui/skills");
   const setSelectedSkills = useSelectedRowsStore(
     (state) => state.setSelectedSkills
@@ -445,6 +446,7 @@ export const SkillsTable = () => {
         setCharData(calculateSkills(sandalphonSkills));
         break;
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     selectedCharacter,
     statsStore,
@@ -459,6 +461,7 @@ export const SkillsTable = () => {
     enhancedDmgBuff,
     echoDmg,
   ]);
+  const _skillsDataColumns = skillsDataColumns({t: (str)=>uiT(str)});
   return (
     <div className="flex flex-col gap-4">
       <div>
@@ -466,7 +469,7 @@ export const SkillsTable = () => {
       </div>
       <SkillsDataTable
         data={charData}
-        columns={skillsDataColumns}
+        columns={_skillsDataColumns}
         setRowSelectionsForExport={setSelectedSkills}
       />
       {selectedCharacter === "Sandalphon" && (

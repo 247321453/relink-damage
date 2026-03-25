@@ -182,6 +182,7 @@ const TraitsTable = ({
 }) => {
   const params = useParams();
   const lng = params.lng as string;
+  const uiTranslate = useTranslation(lng, "ui");
   const traitsTranslate = useTranslation(lng, "traits");
   const t = useTranslationEz("ui/traits");
   return (
@@ -214,7 +215,7 @@ const TraitsTable = ({
                 </TableCell>
                 <TableCell>
                   {convertCalculatorToLogsTrait(trait.traitName) === undefined
-                    ? trait.traitName
+                    ? uiTranslate.t(trait.traitName)
                     : traitsTranslate.t(
                         `${convertCalculatorToLogsTrait(trait.traitName)}.text`
                       )}

@@ -49,7 +49,7 @@ export const CharacterPicker = () => {
           <CharacterSpecificInput
             characterSpecificVariable={arvessFermare}
             setCharacterSpecificVariable={setArvessFermare}
-            title="Arvess Fermare"
+            title={uiTranslate.t("Arvess Fermare")}
             description=""
             isCharacterSpecificVariableBoolean
           />
@@ -59,7 +59,7 @@ export const CharacterPicker = () => {
           <CharacterSpecificInput
             characterSpecificVariable={uniqueSigilActive}
             setCharacterSpecificVariable={setUniqueSigilActive}
-            title="Unique Sigil Active"
+            title={uiTranslate.t("Unique Sigil Active")}
             description=""
             isCharacterSpecificVariableBoolean
           />
@@ -69,7 +69,7 @@ export const CharacterPicker = () => {
           <CharacterSpecificInput
             characterSpecificVariable={avatarActive}
             setCharacterSpecificVariable={setAvatarActive}
-            title="Avatar Active"
+            title={uiTranslate.t("Avatar Active")}
             description=""
             isCharacterSpecificVariableBoolean
           />

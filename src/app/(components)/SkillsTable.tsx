@@ -33,6 +33,7 @@ import { tweyenSkills } from "@/constants/character/skills/tweyen";
 import { seofonSkills } from "@/constants/character/skills/seofon";
 import { characterConstants } from "@/constants/character/characters";
 import { sandalphonSkills } from "@/constants/character/skills/sandalphon";
+import { useTranslationEz } from "@/app/(i18n)/client";
 
 export const SkillsTable = () => {
   const selectedCharacter = useBuildStore((state) => state.selectedCharacter);
@@ -48,6 +49,7 @@ export const SkillsTable = () => {
   const enhancedDmgBuff = useBuildStore((state) => state.enhancedDmgBuff);
   const [charData, setCharData] = useState<SkillCalculatedTable[]>([]);
   const echoDmg = useStatsStore((state) => state.echoDmg);
+  const t = useTranslationEz("ui/skills");
   const setSelectedSkills = useSelectedRowsStore(
     (state) => state.setSelectedSkills
   );
@@ -357,7 +359,7 @@ export const SkillsTable = () => {
             supplemental
         );
         return {
-          skill: skill.skill,
+          skill: t(skill.skill),
           modifier: skill.modifier,
           skillRatio: skill.skillRatio,
           dmgCap: skill.dmgCap,

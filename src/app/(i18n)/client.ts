@@ -14,6 +14,9 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { getOptions, languages, cookieName } from "./settings";
 
 const runsOnServerSide = typeof window === "undefined";
+export interface ITranslationProps {
+  t: (_string: string) => string;
+}
 
 // on client side the normal singleton is ok
 i18next

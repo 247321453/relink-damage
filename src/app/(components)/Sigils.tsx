@@ -43,6 +43,7 @@ interface SigilsPickerProps {
 const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
   const params = useParams();
   const lng = params.lng as string;
+  const uiTranslate = useTranslation(lng, "ui");
   const traitsTranslate = useTranslation(lng, "traits");
   const updateSigilSet = useBuildStore((state) => state.updateSigilSet);
 
@@ -51,7 +52,7 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
       value: sigil.sigilName,
       label:
         convertCalculatorToLogsTrait(sigil.sigilName) === undefined
-          ? sigil.sigilName
+          ? uiTranslate.t(sigil.sigilName)
           : traitsTranslate.t(
               `${convertCalculatorToLogsTrait(sigil.sigilName)}.text`
             ),
@@ -72,7 +73,7 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
           <ComboBox
             commandEmptyText="None"
             options={options}
-            placeHolder="Input Sigils"
+            placeHolder={uiTranslate.t("Input Sigils")}
             value={sigilSet.sigil1}
             setValue={(value) => {
               updateSigilSet(index, {
@@ -99,7 +100,7 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
           <ComboBox
             commandEmptyText="None"
             options={options}
-            placeHolder="Input Sigils"
+            placeHolder={uiTranslate.t("Input Sigils")}
             value={sigilSet.sigil2}
             setValue={(value) => {
               updateSigilSet(index, {

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
-
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,6 +30,8 @@ interface ComboBoxProps {
   placeHolder: string;
   value: string;
   setValue: (_string: string) => void;
+  showImage: boolean;
+  getImage: (_string: string) => string;
 }
 
 export function ComboBox({
@@ -38,6 +40,8 @@ export function ComboBox({
   placeHolder,
   value,
   setValue,
+  showImage,
+  getImage,
 }: ComboBoxProps) {
   const [open, setOpen] = React.useState(false);
   // const [value, setValue] = React.useState(_value);
@@ -66,8 +70,9 @@ export function ComboBox({
               {options.map((option) => {
                 return (
                   <CommandItem
-                    key={option.value}
+                    key={option.label}
                     value={option.value}
+                    keywords={[option.label, option.value]}
                     onSelect={(currentValue) => {
                       setValue(currentValue === value ? "" : currentValue);
                       setOpen(false);
@@ -79,7 +84,13 @@ export function ComboBox({
                         value === option.value ? "opacity-100" : "opacity-0"
                       )}
                     />
-                    {option.label}
+                    <Image
+                      alt=""
+                      className={cn("mr-2", showImage ? "opacity-100" : "hidden")}
+                      height={24}
+                      width={24}
+                      src={getImage(option.value)} />
+                    <span>{option.label}</span>
                   </CommandItem>
                 );
               })}

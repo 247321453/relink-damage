@@ -89,6 +89,11 @@ export const Weapon = () => {
                           traitName: value as TraitLiterals,
                         });
                       }}
+                      showImage={true}
+                      getImage={(value) => {
+                          return getSigilImage(value as TraitLiterals) as string
+                        }
+                      }
                     />
                   </div>
 

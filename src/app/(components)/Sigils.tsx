@@ -80,6 +80,11 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
                 sigil1: value as TraitLiterals,
               });
             }}
+            showImage={true}
+            getImage={(value) => {
+                return getSigilImage(value as TraitLiterals) as string
+              }
+            }
           />
         </div>
         <div className=" flex">
@@ -102,6 +107,11 @@ const SigilsPicker = ({ index, sigilSet }: SigilsPickerProps) => {
                 sigil2: value as TraitLiterals,
               });
             }}
+            showImage={true}
+            getImage={(value) => {
+                return getSigilImage(value as TraitLiterals) as string
+              }
+            }
           />
         </div>
       </div>

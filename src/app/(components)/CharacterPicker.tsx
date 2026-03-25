@@ -141,6 +141,11 @@ export const CharacterPicker = () => {
             setValue={(value) => {
               setSelectedCharacter(value as Character);
             }}
+            showImage={true}
+            getImage={(value) => {
+                return getCharacterImage(value as Character) as string
+              }
+            }
           />
           <div className="relative aspect-square">
             <Image

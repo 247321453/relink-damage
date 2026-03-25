@@ -86,7 +86,7 @@ export function ComboBox({
                     />
                     <Image
                       alt=""
-                      className={cn("mr-2", showImage ? "opacity-100" : "opacity-0")}
+                      className={cn("mr-2", showImage ? "opacity-100" : "hidden")}
                       height={24}
                       width={24}
                       src={getImage(option.value)} />

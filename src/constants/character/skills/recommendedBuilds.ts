@@ -36,50 +36,41 @@ export const recommendedBuilds: RecommendedBuildPage[] = [
         name: "Default Tweyen",
         selectedCharacter: "Tweyen",
         sigilsEquipped: [
-          { sigil1: "Alpha", sigil2: "DMG Cap", level: 15 },
-          { sigil1: "Alpha", sigil2: "DMG Cap", level: 15 },
-          { sigil1: "Gamma", sigil2: "DMG Cap", level: 15 },
-          { sigil1: "Gamma", sigil2: "DMG Cap", level: 15 },
           {
-            sigil1: "Supplementary DMG",
-            sigil2: "Nimble Onslaught",
-            level: 15,
+            "sigil1": "Beta",
+            "sigil2": "DMG Cap",
+            "level": 15
           },
           {
-            sigil1: "Supplementary DMG",
-            sigil2: "Quick Cooldown",
-            level: 15,
+            "sigil1": "Beta",
+            "sigil2": "DMG Cap",
+            "level": 15
           },
           {
-            sigil1: "Quick Charge",
-            sigil2: "Cascade",
-            level: 15,
+            "sigil1": "Gamma",
+            "sigil2": "DMG Cap",
+            "level": 15
           },
           {
-            sigil1: "Critical Hit Rate",
-            sigil2: "Stamina",
-            level: 15,
+            "sigil1": "Gamma",
+            "sigil2": "DMG Cap",
+            "level": 15
           },
           {
-            sigil1: "War Elemental",
-            sigil2: "None",
-            level: 15,
+            "sigil1": "Awakening 1",
+            "sigil2": "Critical Hit Rate",
+            "level": 15
           },
           {
-            sigil1: "Awakening 1",
-            sigil2: "Awakening 2",
-            level: 15,
+            "sigil1": "Warpath",
+            "sigil2": "Nimble Onslaught",
+            "level": 15
           },
           {
-            sigil1: "Warpath",
-            sigil2: "None",
-            level: 15,
-          },
-          {
-            sigil1: "Boundary/Ain+",
-            sigil2: "None",
-            level: 15,
-          },
+            "sigil1": "Boundary/Ain+",
+            "sigil2": "Regen",
+            "level": 15
+          }
         ],
         overmasteries: {
           attack: 1000,
@@ -91,9 +82,9 @@ export const recommendedBuilds: RecommendedBuildPage[] = [
           critHitRate: 0.2,
         },
         weaponImbues: [
-          { traitName: "Stun Power", level: 10 },
-          { traitName: "Concentrated Fire", level: 7 },
-          { traitName: "Cascade", level: 5 },
+          { traitName: "Stun Power", level: 20 },
+          { traitName: "Quick Charge", level: 15 },
+          { traitName: "Cascade", level: 10 },
         ],
         isMaxAwakening: true,
         isTerminus: false,

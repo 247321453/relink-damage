@@ -331,6 +331,21 @@ export function convertLogsToCalculatorTrait(
       return "None";
     case "fdd1ad24":
       return "Warpath";
+    //append
+    case "ee85cd1f":
+      return "Berserker Echo";
+    case "d40d1e9b":
+      return "Awakening";//SKILL_172_00
+    case "15806dfc":
+      return "Awakening";//SKILL_172_01
+    case "1a2ef59e":
+      return "Boundary/Ain+";//SKILL_172_03
+    case "3d8153a1":
+      return "Spartan Echo";
+    case "4e5f6706":
+      return "Warpath";
+    case "51c115d2":
+      return "Super Ultimate Perfect Dodge";
     default:
       return "None";
   }
@@ -405,9 +420,17 @@ export const logsTraits = {
     key: "SKILL_153_00",
     text: "Head Start",
   },
+  "15806dfc": {
+    key: "SKILL_172_01",
+    text: "Supreme Primarch's Nimbus"
+  },
   "16eff868": {
     key: "SKILL_122_01",
     text: "Hero's Will",
+  },
+  "1a2ef59e": {
+    key: "SKILL_172_03",
+    text: "Ain"
   },
   "1b0d9897": {
     key: "SKILL_141_00",
@@ -473,6 +496,10 @@ export const logsTraits = {
     key: "SKILL_061_00",
     text: "Guard Payback",
   },
+  "3d8153a1": {
+    key: "SKILL_234_00",
+    text: "Spartan Echo"
+  },
   "3f2c482e": {
     key: "SKILL_100_00",
     text: "Supplements",
@@ -505,6 +532,10 @@ export const logsTraits = {
     key: "SKILL_146_00",
     text: "War Elemental",
   },
+  "4e5f6706": {
+    key: "SKILL_172_02",
+    text: "Supreme Primarch's Warpath"
+  },
   "4f135217": {
     key: "SKILL_131_02",
     text: "Crimson's Warpath",
@@ -520,6 +551,10 @@ export const logsTraits = {
   "50b453dd": {
     key: "SKILL_057_00",
     text: "Skill Sealed Resistance",
+  },
+  "51c115d2": {
+    key: "SKILL_235_00",
+    text: "Super Ultimate Perfect Dodge"
   },
   "522e2388": {
     key: "SKILL_125_01",
@@ -857,6 +892,10 @@ export const logsTraits = {
     key: "SKILL_164_00",
     text: "Crabmiration",
   },
+  d40d1e9b: {
+    key: "SKILL_172_00",
+    text: "Supreme Primarch's Awe"
+  },
   d54f8ca7: {
     key: "SKILL_051_00",
     text: "Sandtomb Resistance",
@@ -940,6 +979,10 @@ export const logsTraits = {
   ec3cf174: {
     key: "SKILL_129_00",
     text: "Founder's Strategy",
+  },
+  ee85cd1f: {
+    key: "SKILL_233_00",
+    text: "Berserker Echo"
   },
   ef05ec4d: {
     key: "SKILL_170_03",
@@ -1138,6 +1181,14 @@ export const logsTraitsIDs = [
   "f8496336",
   "fb572681",
   "fdd1ad24",
+  //append
+  "ee85cd1f",
+  "d40d1e9b",
+  "15806dfc",
+  "1a2ef59e",
+  "3d8153a1",
+  "4e5f6706",
+  "51c115d2",
 ];
 
 // for typescript shit jesus f
@@ -1300,6 +1351,14 @@ const logsTraitsIDsArray = [
   "f8496336",
   "fb572681",
   "fdd1ad24",
+  //append
+  "ee85cd1f",
+  "d40d1e9b",
+  "15806dfc",
+  "1a2ef59e",
+  "3d8153a1",
+  "4e5f6706",
+  "51c115d2",
 ] as const;
 
 export type LogsTraitsIDs = (typeof logsTraitsIDsArray)[number];

@@ -387,6 +387,20 @@ export const sigilConstants: {
     sigilMaxLevel: 15,
   },
   {
+    sigilName: "Berserker Echo",
+    sigilImage: "/images/3lmC4aG.png",
+    sigilColor: "Orange",
+    sigilSeconds: "GrayRedPurpleBlueNone",
+    sigilMaxLevel: 15,
+  },
+  {
+    sigilName: "Spartan Echo",
+    sigilImage: "/images/3lmC4aG.png",
+    sigilColor: "Orange",
+    sigilSeconds: "GrayRedPurpleBlueNone",
+    sigilMaxLevel: 15,
+  },
+  {
     sigilName: "Quick Cooldown",
     sigilImage: "/images/wGc0qLp.png",
     sigilColor: "Red",
@@ -457,6 +471,20 @@ export const sigilConstants: {
     sigilMaxLevel: 15,
   },
   {
+    sigilName: "Crabmiration",
+    sigilImage: "/images/kZ4liwS.png",
+    sigilColor: "Unique",
+    sigilSeconds: "None",
+    sigilMaxLevel: 15,
+  },
+  {
+    sigilName: "Crabby Resonance",
+    sigilImage: "/images/kZ4liwS.png",
+    sigilColor: "Unique",
+    sigilSeconds: "None",
+    sigilMaxLevel: 15,
+  },
+  {
     sigilName: "Stout Heart",
     sigilImage: "/images/pSxX0U6.png",
     sigilColor: "Unique",
@@ -483,6 +511,13 @@ export const sigilConstants: {
     sigilColor: "Blue",
     sigilSeconds: "PurpleRedNone",
     sigilMaxLevel: 45,
+  },
+  {
+    sigilName: "Greater Aegis",
+    sigilImage: "/images/gj1GNUU.png",
+    sigilColor: "Blue",
+    sigilSeconds: "PurpleRedNone",
+    sigilMaxLevel: 30,
   },
   {
     sigilName: "Garrison",
@@ -534,6 +569,20 @@ export const sigilConstants: {
     sigilMaxLevel: 15,
   },
   {
+    sigilName: "Regen",
+    sigilImage: "/images/regen.jpg",
+    sigilColor: "Red",
+    sigilSeconds: "None",
+    sigilMaxLevel: 30,
+  },
+  {
+    sigilName: "Drain",
+    sigilImage: "/images/regen.jpg",
+    sigilColor: "Red",
+    sigilSeconds: "None",
+    sigilMaxLevel: 30,
+  },
+  {
     sigilName: "Alpha",
     sigilImage: "/images/jnMUx4D.png",
     sigilColor: "Opus",
@@ -573,20 +622,6 @@ export const sigilConstants: {
     sigilImage: "/images/jnMUx4D.png",
     sigilColor: "Unique_New",
     sigilSeconds: "None",
-    sigilMaxLevel: 15,
-  },
-  {
-    sigilName: "Berserker Echo",
-    sigilImage: "https://i.imgur.com/3lmC4aG.png",
-    sigilColor: "Orange",
-    sigilSeconds: "GrayRedPurpleBlueNone",
-    sigilMaxLevel: 15,
-  },
-  {
-    sigilName: "Spartan Echo",
-    sigilImage: "https://i.imgur.com/3lmC4aG.png",
-    sigilColor: "Orange",
-    sigilSeconds: "GrayRedPurpleBlueNone",
     sigilMaxLevel: 15,
   },
   {

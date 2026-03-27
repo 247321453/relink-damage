@@ -41,6 +41,7 @@ export interface SkillCalculatedTable extends SkillConstant {
 }
 
 export interface SkillJsonRaw {
+  ActionId?: number;
   Skill: string;
   Modifier: string;
   "Skill Ratio": number;

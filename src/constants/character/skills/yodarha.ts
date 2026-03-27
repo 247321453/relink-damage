@@ -580,4 +580,4 @@ const skillsJson: SkillJsonRaw[] = [
   },
 ];
 
-export const yordarhaSkills = convertSkills(skillsJson);
+export const yodarhaSkills = convertSkills(skillsJson);
